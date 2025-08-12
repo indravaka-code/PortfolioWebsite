@@ -1,398 +1,209 @@
-<!DOCTYPE HTML>
-<!--
-	Fractal by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Fractal by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indraneel Vaka • Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            grotesk: ['Space Grotesk', 'sans-serif'],
+            noto: ['Noto Sans', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .project-card-image { transition: transform 0.3s ease-in-out; }
+    .project-card:hover .project-card-image { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-100 font-grotesk">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-white dark:bg-neutral-800 px-4 py-2 rounded-md shadow">Skip to content</a>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="content">
-					<h1><a href="#">Indraneel Vaka</a></h1>
-					<p>Passionate about coding and problem solving<br />
-					I bring energy and expertise to every project </a></p>
-					<ul class="actions">
-						<li><a href="https://drive.google.com/file/d/13zRIjy3BBV7sNr2tXZsFSNbmmkF4eAww/view?usp=sharing" class="button primary icon solid fa-download">Resume</a></li>
-						<li><a href="#one" class="button icon solid fa-chevron-down scrolly">Experience</a></li>
-					</ul>
-				</div>
-				<div class="image phone"><div class="inner"><img src="images/indra.jpg" alt="" /></div></div>
-			</header>
+  <div class="min-h-screen flex flex-col">
+    <!-- Header (no nav) -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-neutral-900/80 backdrop-blur border-b border-neutral-200 dark:border-neutral-800">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 17.93V18a1 1 0 0 0-2 0v1.93A8.014 8.014 0 0 1 4.07 13H6a1 1 0 0 0 0-2H4.07A8.014 8.014 0 0 1 11 4.07V6a1 1 0 0 0 2 0V4.07A8.014 8.014 0 0 1 19.93 11H18a1 1 0 0 0 0 2h1.93A8.014 8.014 0 0 1 13 19.93Z" /></svg>
+          </span>
+          <h1 class="text-xl font-bold tracking-tight">Indraneel Vaka</h1>
+        </div>
+      </div>
+    </header>
 
-			
+    <!-- Main content -->
+    <main id="main" class="flex-1 px-6 sm:px-10 md:px-20 lg:px-40 py-14">
+      <div class="max-w-4xl mx-auto flex flex-col gap-24">
+        <!-- Hero -->
+        <section id="hero" class="text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-4">Hi, I'm <span class="text-neutral-900 dark:text-white">Indraneel Vaka</span></h2>
+          <p class="text-neutral-700 dark:text-neutral-300 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto">
+            I'm a Software Engineer based in New York City, focused on building intuitive products that balance user delight with business impact. I bridge the gap between design and data—rapid prototyping at hackathons, leading front-end efforts at Rutgers BITS, and shipping full-stack apps.
+          </p>
+        </section>
 
-		<!-- Two -->
-			<section id="two" class="wrapper">
-				<div class="inner alt">
-					<section class="spotlight">
-						<div class="image"><img src="images/fairshare.png" alt="" /></div>
-						<div class="content">
-							<h3>FairShare</h3>
-							<p>Created an innovative mobile app designed to simplify bill splitting among groups. Leveraged OCR technology to scan and extract data from receipts, including item names, prices, and quantities. Developed a user-friendly interface allowing individuals to select the items they consumed and effortlessly pay their share through Venmo, completing transactions in just three clicks. Utilized React Native for front-end development, Python for backend logic, and Firebase for database management and user authentication.
+        <!-- Projects -->
+        <section id="projects">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="text-3xl font-bold tracking-tight">Featured Projects</h2>
+            <a href="#contact" class="hidden sm:inline-block text-sm font-medium underline underline-offset-4 hover:no-underline">Work with me →</a>
+          </div>
 
-							</p>
-						</div>
-					</section>
-					<section class="spotlight">
-						<div class="image"><img src="images/dashboard.png" alt="" /></div>
-						<div class="content">
-							<h3>Finance Dashboard</h3>
-							<p>Developed a sophisticated personal finance dashboard using Excel and Power BI, automating 80% of ETL (Extract, Transform, Load) processes to improve data processing efficiency. Designed and integrated ten dynamic visualizations that offer comprehensive insights into spending patterns, income trends, and budget allocations. The dashboard features a highly intuitive interface, empowering users to make informed financial decisions with ease.
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="project-card bg-neutral-900 text-white rounded-xl shadow-xl overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden">
+                <div class="w-full aspect-video bg-cover bg-center project-card-image" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCygYdUeIJFnEJ0sk0mnDKAEAdKB9gXmdm9oD2ze3jT7R53zDQw3m9n_Px-F-DHro1g62GeIz7D3yLwuNVTDxtQa-U739VUkxU6KHdGVbajdr__MK05pFJdYB1QXd0ZBC-i04laN3rpYgWlLi4hB1fQUmeiH_DnlZyLJiLMHE5vq91_1d6nHiRPTfTMfGKowKPtyyn79CVefQILljFGsGbFxTDa5KlQwo33-48T1dH0BmePO0BAo_N0DGb3aPEXUMIB6nMrf2ZTQ');"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <p class="text-neutral-400 text-xs uppercase tracking-widest mb-1">Hackathon Project</p>
+                <h3 class="text-xl font-semibold mb-2">KicNic</h3>
+                <p class="text-neutral-300 text-sm leading-relaxed mb-4 flex-grow">
+                  Health hackathon project that tracks vaping events using Apple Watch sensor streams. Built LSTM models in PyTorch for real-time detection, integrated HealthKit for seamless ingestion, and shipped a responsive React + Firebase dashboard with AI-driven guidance.
+                </p>
+                <div class="flex gap-2 flex-wrap text-xs mb-4">
+                  <span class="px-2 py-1 bg-neutral-800 rounded">PyTorch</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">Swift</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">React</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">Python</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">Google Cloud</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">OpenAI API</span>
+                </div>
+                <a href="https://www.youtube.com/watch?v=cTVlcnX3xbM" class="inline-flex items-center justify-center rounded-lg h-10 px-4 bg-neutral-200 text-neutral-900 text-sm font-medium hover:bg-neutral-50 transition-colors">View Project</a>
+              </div>
+            </article>
 
-							</p>
-						</div>
-					</section>
-					
-				</div>
-			</section>
+            <article class="project-card bg-neutral-900 text-white rounded-xl shadow-xl overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden">
+                <div class="w-full aspect-video bg-cover bg-center project-card-image" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUddLrGIE3lI_qv-5KStmEenm2C_119-fxQ7XPrP1Nk9osqYzohHcD1kmVoCLxVJq4tg-I4kLOQRU0vp45ybfFmMjZzIfIqEOOu4SKtCj8ITH3bEbB3XWjdQ3diFXoJfyeS46WtA-V1f6HUU1o8zJax-NPuOELxswlyQ9LTo3fCcgPBhkbXDwB6IlQqTIv_iEvknhCx35yTHv8Fk1YDG0QaH-w0H6-mLCPJe8Q7C7t_hr1o0u2DOiX6TRGHxTbjL2mRSdFw4qecg');"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <p class="text-neutral-400 text-xs uppercase tracking-widest mb-1">Hackathon Project</p>
+                <h3 class="text-xl font-semibold mb-2">FairShare</h3>
+                <p class="text-neutral-300 text-sm leading-relaxed mb-4 flex-grow">
+                  A full‑stack platform that automates expense splitting for roommates. Implemented clean onboarding, Stripe-powered payments, and a polished UI that prioritizes clarity and speed.
+                </p>
+                <div class="flex gap-2 flex-wrap text-xs mb-4">
+                  <span class="px-2 py-1 bg-neutral-800 rounded">React Native</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">Python</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">Google Cloud</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">OpenAI API</span>
+                </div>
+                <a href="https://www.youtube.com/watch?v=DpEoOQX2LSg&t=1s" class="inline-flex items-center justify-center rounded-lg h-10 px-4 bg-neutral-200 text-neutral-900 text-sm font-medium hover:bg-neutral-50 transition-colors">View Project</a>
+              </div>
+            </article>
 
-		
+            <article class="project-card bg-neutral-900 text-white rounded-xl shadow-xl overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden">
+                <div class="w-full aspect-video bg-cover bg-center project-card-image" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfmD3rnQLq2xrivfqGR4gr157_47kZ9MANFJeA9PYKhTqtSftt5fxa95RLcwdmsknlIcZq-3QruyisQXBB2SC4IqMw4zfsPxJggX347x7mmVLn-K4R1TiBYEWQQ1o3w6_IYNBWaIFBrVS621SVCeCWLB9g70LsZr4Mn9H_N9n7JsaVEmzvy8WHRjAbATSodkiDhPHhsFADxMLRWBw4DnDBkb5wZQMWXZMx85pcnlMnic_sKBEju5I5qw6i4njYRuzOBc5-jdF2Yw');"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <p class="text-neutral-400 text-xs uppercase tracking-widest mb-1">Featured Project</p>
+                <h3 class="text-xl font-semibold mb-2">Stock Price Predictor</h3>
+                <p class="text-neutral-300 text-sm leading-relaxed mb-4 flex-grow">
+                  A ML-powered dashboard that forecasts equities using LSTM and ARIMA. Interactive charts, model toggle, and clean explanations to keep users in control of the data.
+                </p>
+                <div class="flex gap-2 flex-wrap text-xs mb-4">
+                  <span class="px-2 py-1 bg-neutral-800 rounded">Python</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">TensorFlow</span>
+                  <span class="px-2 py-1 bg-neutral-800 rounded">Plotly</span>
+                </div>
+                <a href="#" class="inline-flex items-center justify-center rounded-lg h-10 px-4 bg-neutral-200 text-neutral-900 text-sm font-medium hover:bg-neutral-50 transition-colors">View Project</a>
+              </div>
+            </article>
+          </div>
+        </section>
 
-		<!-- Four -->
-		<!--
-			<section id="four" class="wrapper">
-				<div class="inner">
+        <!-- About -->
+        <section id="about" class="bg-white dark:bg-neutral-800 p-8 rounded-xl shadow-lg">
+          <h2 class="text-3xl font-bold tracking-tight mb-6">About Me</h2>
+          <p class="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            I’m Indraneel Vaka, a Data Science and Economics student at Rutgers University with a passion for building practical, user-focused technology. My experience spans software engineering, product management, and leadership—designing and shipping applications that improve performance, usability, and efficiency.
+          </p>
+          <p class="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            I code in Java, Python, JavaScript/TypeScript, C++, and React. Recent projects span a FinTech app, a health tracking platform, and a live crypto tracker.
+          </p>
+          <p class="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+            
+          </p>
+        </section>
 
-					<header class="major">
-						<h2>Elements</h2>
-					</header>
+        <!-- Contact -->
+        <section id="contact" class="bg-neutral-900 dark:bg-neutral-950 text-white p-8 rounded-xl shadow-lg text-center">
+          <h2 class="text-3xl font-bold tracking-tight mb-6">Let's Connect</h2>
+          <p class="text-neutral-300 leading-relaxed mb-6 max-w-md mx-auto">
+            Interested in collaborating or just want to chat? Shoot me a message—I'm always excited to hear about new ideas.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="mailto:irv6@scarletmail.rutgers.edu" class="flex items-center justify-center gap-2 w-full sm:w-auto h-11 px-6 rounded-lg bg-neutral-100 text-neutral-900 text-sm font-medium hover:bg-neutral-200 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>Email Me</span>
+            </a>
+            <a href="https://www.linkedin.com/in/indraneelvaka" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-600 text-neutral-100 text-sm font-medium hover:bg-neutral-700 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
 
-					<section>
-						<h4>Text</h4>
-						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-						<hr />
-						<header>
-							<h4>Heading with a Subtitle</h4>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<header>
-							<h5>Heading with a Subtitle</h5>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<hr />
-						<h2>Heading Level 2</h2>
-						<h3>Heading Level 3</h3>
-						<h4>Heading Level 4</h4>
-						<h5>Heading Level 5</h5>
-						<h6>Heading Level 6</h6>
-						<hr />
-						<h5>Blockquote</h5>
-						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-						<h5>Preformatted</h5>
-						<pre><code>i = 0;
+    <footer class="text-center py-8 border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+      <p class="text-neutral-600 dark:text-neutral-400 text-sm">© <span id="year"></span> Indraneel Vaka. All rights reserved.</p>
+    </footer>
+  </div>
 
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
+  <!-- Floating Dark Mode Toggle -->
+  <button id="themeToggleFloating" aria-label="Toggle dark mode" class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 shadow-lg border border-neutral-300 dark:border-neutral-700 hover:opacity-90 transition">
+    <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="hidden w-5 h-5">
+      <path d="M12 18a6 6 0 1 0-6-6 6.007 6.007 0 0 0 6 6Zm0-10a4 4 0 1 1-4 4 4.005 4.005 0 0 1 4-4Zm0-6a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1ZM4.222 5.636a1 1 0 0 1 1.414 0L6.343 6.343a1 1 0 0 1-1.414 1.414L4.222 7.05a1 1 0 0 1 0-1.414Zm13.435 13.435a1 1 0 0 1 1.414 0l.707.707a1 1 0 1 1-1.414 1.414l-.707-.707a1 1 0 0 1 0-1.414ZM1 12a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H2a1 1 0 0 1-1-1Zm18-1h1a1 1 0 0 1 0 2h-1a1 1 0 0 1 0-2ZM4.222 18.364a1 1 0 0 1 1.414 0L6.343 19.07a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 0-1.414ZM17.657 4.222a1 1 0 0 1 1.414 0l.707.707a1 1 0 1 1-1.414 1.414l-.707-.707a1 1 0 0 1 0-1.414Z" />
+    </svg>
+    <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+      <path d="M21.752 15.002A9 9 0 0 1 9.002 2.252a1 1 0 0 0-1.151-1.15A11 11 0 1 0 22.9 16.152a1 1 0 0 0-1.148-1.15ZM12 20a9 9 0 0 1-8.485-6.1 9.018 9.018 0 0 1 7.616-11.6A11 11 0 1 0 20.1 17.485 8.963 8.963 0 0 1 12 20Z" />
+    </svg>
+  </button>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-					</section>
+  <script>
+    const userPref = localStorage.getItem('theme');
+    const systemPrefDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const root = document.documentElement;
 
-					<section>
-						<h4>Lists</h4>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<h5>Unordered</h5>
-								<ul>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-								<h5>Alternate</h5>
-								<ul class="alt">
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<h5>Ordered</h5>
-								<ol>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis viverra.</li>
-									<li>Felis enim feugiat.</li>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis lorem.</li>
-									<li>Felis enim et feugiat.</li>
-								</ol>
-								<h5>Icons</h5>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<h5>Actions</h5>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<ul class="actions">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions small">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary fit">Default</a></li>
-									<li><a href="#" class="button fit">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small fit">Small</a></li>
-									<li><a href="#" class="button small fit">Small</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+    function setTheme(dark) {
+      if (dark) {
+        root.classList.add('dark');
+        document.getElementById('moonIcon').classList.add('hidden');
+        document.getElementById('sunIcon').classList.remove('hidden');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        root.classList.remove('dark');
+        document.getElementById('sunIcon').classList.add('hidden');
+        document.getElementById('moonIcon').classList.remove('hidden');
+        localStorage.setItem('theme', 'light');
+      }
+    }
 
-					<section>
-						<h4>Table</h4>
-						<h5>Default</h5>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
+    setTheme(userPref ? userPref === 'dark' : systemPrefDark);
 
-						<h5>Alternate</h5>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</section>
+    const toggleBtn = document.getElementById('themeToggleFloating');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        setTheme(!root.classList.contains('dark'));
+      });
+    }
 
-					<section>
-						<h4>Buttons</h4>
-						<ul class="actions">
-							<li><a href="#" class="button primary">Primary</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button large">Large</a></li>
-							<li><a href="#" class="button">Default</a></li>
-							<li><a href="#" class="button small">Small</a></li>
-						</ul>
-						<ul class="actions fit">
-							<li><a href="#" class="button fit">Fit</a></li>
-							<li><a href="#" class="button primary fit">Fit</a></li>
-							<li><a href="#" class="button fit">Fit</a></li>
-						</ul>
-						<ul class="actions fit small">
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-							<li><a href="#" class="button fit small">Fit + Small</a></li>
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-							<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-						</ul>
-						<ul class="actions">
-							<li><span class="button primary disabled">Disabled</span></li>
-							<li><span class="button disabled">Disabled</span></li>
-						</ul>
-					</section>
-
-					<section>
-						<h4>Form</h4>
-						<form method="post" action="#">
-							<div class="row gtr-uniform">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-								</div>
-								<div class="col-12">
-									<select name="demo-category" id="demo-category">
-										<option value="">- Category -</option>
-										<option value="1">Manufacturing</option>
-										<option value="1">Shipping</option>
-										<option value="1">Administration</option>
-										<option value="1">Human Resources</option>
-									</select>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-									<label for="demo-priority-low">Low</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-normal" name="demo-priority">
-									<label for="demo-priority-normal">Normal</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-high" name="demo-priority">
-									<label for="demo-priority-high">High</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-human" name="demo-human" checked>
-									<label for="demo-human">Not a robot</label>
-								</div>
-								<div class="col-12">
-									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</section>
-
-					<section>
-						<h4>Image</h4>
-						<h5>Fit</h5>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<div class="col-12"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-							</div>
-						</div>
-						<h5>Left &amp; Right</h5>
-						<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-					</section>
-
-				</div>
-			</section>
-		-->
-
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				</ul>
-				<p class="copyright">&copy; Untitled. Credits: <a href="http://html5up.net">HTML5 UP</a></p>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
